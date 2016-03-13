@@ -1,38 +1,37 @@
 Feature: Multiplication
-  In order to multiply two or more numbers
+  In order to Divie two or more numbers
   As a calculator user
-  I need to be able multiply numbers together using the calculator
+  I need to be able Divide numbers together using the calculator
   
   
 
-Scenario: Multiply two numbers together
+Scenario: Divide two numbers together
     Given I enter "5" into the calculator
-    And I hit "multiply"
+    And I hit "Divide"
     And I enter "10" into the calculator
     And I hit "equals"
-    Then I see a result of "50"
+    Then I see a result of "0.5"
 
-Scenario: Multiply three numbers together
+Scenario: Divide three numbers together
     Given I enter "5" into the calculator
-    And I hit "multiply"
+    And I hit "Divide"
     And I enter "10" into the calculator
-    And I hit "multiply"
+    And I hit "Divide"
     And I enter "2" into the calculator
     And I hit "equals"
-    Then I see a result of "100"
+    Then I see a result of "0.25"
 
-
-Scenario: Multiply two numbers and add another
+	
+Scenario: Divide two numbers and Multiply another
     Given I enter "5" into the calculator
-    And I hit "multiply"
+    And I hit "Divide"
     And I enter "10" into the calculator
-    And I hit "add"
+    And I hit "Multiply"
     And I enter "2" into the calculator
     And I hit "equals"
-    Then I see a result of "52"
-
-
-Scenario: Multiply sign with one number
+    Then I see a result of "1"
+	
+Scenario: Divide sign with one number
     Given I enter "5" into the calculator
-	And I hit "Multiply"
+	And I hit "Divide"
     Then I shouldn't see any a result

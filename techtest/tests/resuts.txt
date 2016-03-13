@@ -1,0 +1,192 @@
+
+C:\Behat\bin>behat
+Feature: Addtion
+  In order to sum two or more numbers
+  As a calculator user
+  I need to be able add numbers together using the calculator
+
+  Scenario: Add two numbers together      # features\Add.feature:8
+    Given I enter "5" into the calculator # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "add"
+    And I enter "10" into the calculator  # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                    # FeatureContext::iHitEquals()
+    Then I see a result of "15"           # FeatureContext::iSeeAResultOf()
+
+  Scenario: Add three numbers together    # features\Add.feature:15
+    Given I enter "5" into the calculator # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Add"
+    And I enter "10" into the calculator  # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Add"
+    And I enter "2" into the calculator   # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                    # FeatureContext::iHitEquals()
+    Then I see a result of "17"           # FeatureContext::iSeeAResultOf()
+
+  Scenario: Add two numbers and divide another # features\Add.feature:25
+    Given I enter "5" into the calculator      # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Add"
+    And I enter "10" into the calculator       # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "divide"                         # FeatureContext::iHitDivide()
+    And I enter "2" into the calculator        # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                         # FeatureContext::iHitEquals()
+    Then I see a result of "10"                # FeatureContext::iSeeAResultOf()
+
+  Scenario: Add sign with one number           # features\Add.feature:34
+    Given I enter "5" into the calculator      # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Add"
+    Then I shouldn't see any a result
+
+Feature: Multiplication
+  In order to Divie two or more numbers
+  As a calculator user
+  I need to be able Divide numbers together using the calculator
+
+  Scenario: Divide two numbers together        # features\Divide.feature:8
+    Given I enter "5" into the calculator      # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Divide"
+    And I enter "10" into the calculator       # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                         # FeatureContext::iHitEquals()
+    Then I see a result of "0.5"
+
+  Scenario: Divide three numbers together      # features\Divide.feature:15
+    Given I enter "5" into the calculator      # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Divide"
+    And I enter "10" into the calculator       # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Divide"
+    And I enter "2" into the calculator        # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                         # FeatureContext::iHitEquals()
+    Then I see a result of "0.25"
+
+  Scenario: Divide two numbers and Multiply another # features\Divide.feature:25
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Divide"
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Multiply"
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "1"                      # FeatureContext::iSeeAResultOf()
+
+  Scenario: Divide sign with one number             # features\Divide.feature:34
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Divide"
+    Then I shouldn't see any a result
+
+Feature: Addtion
+  In order to minues two or more numbers
+  As a calculator user
+  I need to be able to minues numbers together using the calculator
+
+  Scenario: Minus two numbers together              # features\minus.feature:8
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Minus"
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "-5"
+
+  Scenario: Minus three numbers together            # features\minus.feature:15
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Minus"
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Minus"
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "-7"
+
+  Scenario: Minus two numbers and multiply another  # features\minus.feature:25
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "minues"
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                            # FeatureContext::iHitMultiply()
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "15"                     # FeatureContext::iSeeAResultOf()
+
+  Scenario: Minus two numbers and divide another    # features\minus.feature:35
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "minues"
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "divide"                              # FeatureContext::iHitDivide()
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "0"                      # FeatureContext::iSeeAResultOf()
+
+  Scenario: Minus two numbers and add another       # features\minus.feature:45
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "minues"
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "add"
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "-3"
+
+  Scenario: Minus sign with one number              # features\minus.feature:54
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "minues"
+    Then I shouldn't see any a result
+
+Feature: Multiplication
+  In order to multiply two or more numbers
+  As a calculator user
+  I need to be able multiply numbers together using the calculator
+
+  Scenario: Multiply two numbers together           # features\multiply.feature:8
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                            # FeatureContext::iHitMultiply()
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "50"                     # FeatureContext::iSeeAResultOf()
+
+  Scenario: Multiply three numbers together         # features\multiply.feature:15
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                            # FeatureContext::iHitMultiply()
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                            # FeatureContext::iHitMultiply()
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "100"                    # FeatureContext::iSeeAResultOf()
+
+  Scenario: Multiply two numbers and add another    # features\multiply.feature:25
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "multiply"                            # FeatureContext::iHitMultiply()
+    And I enter "10" into the calculator            # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "add"
+    And I enter "2" into the calculator             # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "equals"                              # FeatureContext::iHitEquals()
+    Then I see a result of "52"                     # FeatureContext::iSeeAResultOf()
+
+  Scenario: Multiply sign with one number           # features\multiply.feature:35
+    Given I enter "5" into the calculator           # FeatureContext::iEnterIntoTheCalculator()
+    And I hit "Multiply"
+    Then I shouldn't see any a result
+
+18 scenarios (2 passed, 16 undefined)
+102 steps (30 passed, 42 skipped, 30 undefined)
+0m0.5s
+
+You can implement step definitions for undefined steps with these snippets:
+
+    /**
+     * @Given /^I hit "([^"]*)"$/
+     */
+    public function iHit($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then /^I shouldn\'t see any a result$/
+     */
+    public function iShouldnTSeeAnyAResult()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then /^I see a result of "([^"]*)"$/
+     */
+    public function iSeeAResultOf2($arg1)
+    {
+        throw new PendingException();
+    }
+
+
+C:\Behat\bin>
