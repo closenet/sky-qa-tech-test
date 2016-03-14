@@ -5,7 +5,7 @@ use Behat\Behat\Context\BehatContext,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
-set_include_path(get_include_path() . PATH_SEPARATOR . "../lib");
+set_include_path(get_include_path() . PATH_SEPARATOR . "../../lib");
 
 require_once("iCalculator.php");
 require_once("iScientificCalculator.php");
