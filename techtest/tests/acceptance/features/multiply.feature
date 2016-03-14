@@ -34,5 +34,5 @@ Scenario: Multiply two numbers and add another
 
 Scenario: Multiply sign with one number
     Given I enter "5" into the calculator
-	And I hit "Multiply"
-    Then I shouldn't see any a result
+	And I hit "multiply"
+	Then same result "5"

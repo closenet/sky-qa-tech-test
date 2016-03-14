@@ -5,26 +5,26 @@ Feature: Addtion
   
 
 
-Scenario: Minus two numbers together
+Scenario: minus two numbers together
     Given I enter "5" into the calculator
-    And I hit "Minus"
+    And I hit "minus"
     And I enter "10" into the calculator
     And I hit "equals"
     Then I see a result of "-5"
 
-Scenario: Minus three numbers together
+Scenario: minus three numbers together
     Given I enter "5" into the calculator
-    And I hit "Minus"
+    And I hit "minus"
     And I enter "10" into the calculator
-    And I hit "Minus"
+    And I hit "minus"
     And I enter "2" into the calculator
     And I hit "equals"
     Then I see a result of "-7"
 
 
-Scenario: Minus two numbers and multiply another
+Scenario: minus two numbers and multiply another
     Given I enter "5" into the calculator
-    And I hit "minues"
+    And I hit "minus"
     And I enter "10" into the calculator
     And I hit "multiply"
     And I enter "2" into the calculator
@@ -32,9 +32,9 @@ Scenario: Minus two numbers and multiply another
     Then I see a result of "15"
 
 	
-Scenario: Minus two numbers and divide another
+Scenario: minus two numbers and divide another
     Given I enter "5" into the calculator
-    And I hit "minues"
+    And I hit "minus"
     And I enter "10" into the calculator
     And I hit "divide"
     And I enter "2" into the calculator
@@ -42,16 +42,16 @@ Scenario: Minus two numbers and divide another
     Then I see a result of "0"	
 
 
-Scenario: Minus two numbers and add another
+Scenario: minus two numbers and add another
     Given I enter "5" into the calculator
-    And I hit "minues"
+    And I hit "minus"
     And I enter "10" into the calculator
     And I hit "add"
     And I enter "2" into the calculator
     And I hit "equals"
     Then I see a result of "-3"		
 	
-Scenario: Minus sign with one number
+Scenario: minus sign with one number
     Given I enter "5" into the calculator
-	And I hit "minues"
-    Then I shouldn't see any a result
+	And I hit "minus"
+    Then same result "5"

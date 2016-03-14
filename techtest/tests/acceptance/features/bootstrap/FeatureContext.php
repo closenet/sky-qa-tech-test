@@ -5,7 +5,7 @@ use Behat\Behat\Context\BehatContext,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
-set_include_path(get_include_path() . PATH_SEPARATOR . "../../lib");
+set_include_path(get_include_path() . PATH_SEPARATOR . "../lib");
 
 require_once("iCalculator.php");
 require_once("iScientificCalculator.php");
@@ -23,6 +23,19 @@ class FeatureContext extends BehatContext {
      */
     public function iEnterIntoTheCalculator($argument1) {
         $this->calculator->pressNumber($argument1);
+    }
+	
+	  /**
+     * @When /^I hit "add"$/
+     */
+    public function iHitAdd() {
+        $this->calculator->pressAdd();
+    }
+  /**
+     * @When /^I hit "minus"$/
+     */
+    public function iHitMinus() {
+        $this->calculator->pressSubtract();
     }
 
     /**
@@ -50,6 +63,15 @@ class FeatureContext extends BehatContext {
      * @Then /^I see a result of "(\d+)"$/
      */
     public function iSeeAResultOf($argument1) {
+        $result = $this->calculator->readScreen();
+        if($result != $argument1) {
+            throw new Exception("Wrong result, actual is [$result]");
+        }
+    }
+	 /**
+     * @Then /^same result "(\d+)"$/
+     */
+	 public function sameResult($argument1) {
         $result = $this->calculator->readScreen();
         if($result != $argument1) {
             throw new Exception("Wrong result, actual is [$result]");
